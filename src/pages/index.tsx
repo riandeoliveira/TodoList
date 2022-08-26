@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
+import Home from "./home";
 
-const Home: NextPage = (): JSX.Element => {
-  return <h1>Hello World</h1>;
-};
+const Index: NextPage = (): JSX.Element => <Home />;
 
-export default Home;
+export default Index;
