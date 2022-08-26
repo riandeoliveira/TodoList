@@ -1,0 +1,10 @@
+.env
+.husky
+.next
+.swc
+.vercel
+/build
+/coverage
+/dist
+/node_modules
+/TODO.md

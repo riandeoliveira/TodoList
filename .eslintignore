@@ -1,0 +1,7 @@
+.next
+.swc
+/build
+/coverage
+/dist
+/next-env.d.ts
+/node_modules

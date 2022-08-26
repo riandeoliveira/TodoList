@@ -1,0 +1,36 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+@mixin focus($size: "small", $color-name: "#000000", $brightness: "light") {
+  $hex-color-opacity: 80;
+  $color: "";
+
+  @if $brightness == "dark" {
+    $color: $color-name;
+  }
+
+  @if $brightness == "light" {
+    $color: #{$color-name}#{$hex-color-opacity};
+  }
+
+  @if $size == "large" {
+    border-radius: 0.4rem;
+    outline: 0;
+    transition: box-shadow 0.15s;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 0.4rem $color;
+    }
+  }
+
+  @if $size == "small" {
+    &:focus-visible {
+      border-radius: 0.2rem;
+      outline: 0.2rem solid $color;
+    }
+  }
+}
+
+@mixin google-font($font) {
+  @import url("https://fonts.googleapis.com/css2?family=#{$font}:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
