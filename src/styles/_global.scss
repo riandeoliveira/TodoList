@@ -5,6 +5,7 @@
 * {
   border: 0;
   box-sizing: border-box;
+  color: $neutral-000;
   font-family: $primary-group;
   list-style: none;
   margin: 0;
@@ -17,6 +18,6 @@
 }
 
 body {
-  background-color: $primary-940;
+  background-color: $secondary-940;
   font-size: 1.6rem;
 }
