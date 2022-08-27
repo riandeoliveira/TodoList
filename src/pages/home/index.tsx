@@ -1,17 +1,16 @@
+import { Header } from "components/Header";
+import { TodoForm } from "components/TodoForm";
+import { TodoList } from "components/TodoList";
 import type { NextPage } from "next";
 import styles from "./styles.module.scss";
 
 const Home: NextPage = (): JSX.Element => {
   return (
     <div className={styles.layout}>
-      <div className={styles.todo_list_container}>
-        <div className={styles.todo_list}>
-          <header className={styles.header}>
-            <h1 className={styles.title}>Lista de Tarefas</h1>
-          </header>
-          <div>Form</div>
-          <div>Todos</div>
-        </div>
+      <div className={styles.container}>
+        <Header />
+        <TodoForm />
+        <TodoList />
       </div>
     </div>
   );
