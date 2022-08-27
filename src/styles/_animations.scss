@@ -1,3 +1,5 @@
+$default-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
 @mixin gradient {
   @keyframes gradient {
     0% {
