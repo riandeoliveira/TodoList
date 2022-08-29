@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "private": true,
-  "homepage": "<YOUR_PROJECT_URL>",
+  "homepage": "https://todo-list-ruddy-six.vercel.app/",
   "main": "src/pages/_app.tsx",
   "author": {
     "name": "Rian Oliveira",

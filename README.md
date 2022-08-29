@@ -33,7 +33,7 @@ Tive problemas em configurar e utilizar o **Redux** com o **Local Storage**, ent
 
 ## 💻 Como acessar
 
-<!-- Onde a sua aplicação está hospedada? -->
+A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://todo-list-ruddy-six.vercel.app/).
 
 ## 🛠️ Tecnologias utilizadas
 
