@@ -18,7 +18,6 @@ export const TodoForm = (): JSX.Element => {
 
   const todoNameElement: RefObject<HTMLInputElement> =
     useRef<HTMLInputElement>(null);
-  const todoDescriptionElement: RefObject<HTMLTextAreaElement> = useRef(null);
 
   useEffect(() => {
     todoNameElement.current?.focus();
@@ -27,11 +26,8 @@ export const TodoForm = (): JSX.Element => {
   const handleTodoSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (
-      todoNameElement.current?.value.trim().length === 0 ||
-      todoDescriptionElement.current?.value.trim().length === 0
-    ) {
-      alert("Preencha os campos de texto para adicionar uma nova tarefa!");
+    if (todoNameElement.current?.value.trim().length === 0) {
+      alert("Insira um nome para sua tarefa!");
     } else {
       setTodoName("");
       setTodoDescription("");
@@ -56,7 +52,6 @@ export const TodoForm = (): JSX.Element => {
           rows={5}
           placeholder="Descrição da tarefa..."
           value={todoDescription}
-          ref={todoDescriptionElement}
           className={styles.textarea}
           onChange={(e) => setTodoDescription(e.target.value)}
         ></textarea>
