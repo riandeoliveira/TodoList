@@ -24,21 +24,27 @@ export const TodoList = (): JSX.Element => {
         <div className={styles.filters}>
           <button
             type="button"
-            className={`${styles.button} ${styles.enabled}`}
+            className={`${styles.button} ${
+              filterType === "all" ? styles.enabled : styles.disabled
+            }`}
             onClick={() => filterByType("all")}
           >
             Todas: {allTodos}
           </button>
           <button
             type="button"
-            className={`${styles.button} ${styles.disabled}`}
+            className={`${styles.button} ${
+              filterType === "completed" ? styles.enabled : styles.disabled
+            }`}
             onClick={() => filterByType("completed")}
           >
             Concluídas: {completedTodos}
           </button>
           <button
             type="button"
-            className={`${styles.button} ${styles.disabled}`}
+            className={`${styles.button} ${
+              filterType === "pending" ? styles.enabled : styles.disabled
+            }`}
             onClick={() => filterByType("pending")}
           >
             Pendentes: {pendingTodos}
