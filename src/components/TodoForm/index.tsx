@@ -1,23 +1,13 @@
 import { TodoContext } from "contexts/TodoContext";
 import type { ITodoContext } from "interfaces";
-import {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-  type FormEvent,
-  type RefObject,
-} from "react";
+import { useContext, useEffect, useState, type FormEvent } from "react";
 import styles from "./styles.module.scss";
 
 export const TodoForm = (): JSX.Element => {
-  const { addTodo } = useContext(TodoContext) as ITodoContext;
+  const { addTodo, todoNameElement } = useContext(TodoContext) as ITodoContext;
 
   const [todoName, setTodoName] = useState<string>("");
   const [todoDescription, setTodoDescription] = useState<string>("");
-
-  const todoNameElement: RefObject<HTMLInputElement> =
-    useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     todoNameElement.current?.focus();
@@ -38,7 +28,7 @@ export const TodoForm = (): JSX.Element => {
 
   return (
     <section className={styles.section}>
-      <h2>Nova tarefa</h2>
+      <h2 className={styles.title}>Nova tarefa</h2>
       <form className={styles.form} onSubmit={handleTodoSubmit}>
         <input
           type="text"
