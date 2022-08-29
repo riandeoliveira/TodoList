@@ -1,24 +1,29 @@
 <div align="center">
-  <h1>Todo List</h1>
+  <img src=".github/logo.png" alt="BDTI logo" />
+  <br>
+  <h1>🚀 Todo List - Teste de React 🚀</h1>
 </div>
 
 ## 📚 Sobre
 
-<!-- Uma breve descrição do seu projeto -->
+Lista de Tarefas básica e funcional, com salvamento de dados no Local Storage do navegador.
 
 ## 🏗️ Desenvolvimento
 
-<!-- Detalhes sobre o desenvolvimento -->
+O projeto é um teste de **React** proposto pela empresa **[BDTI - Soluções em Tecnologia](https://www.linkedin.com/company/bdti-consultoria-e-solucoes-em-tecnologia/about/)**.
 
 ## 🕹️ Possui as seguintes funcionalidades:
 
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+- Adicionar uma nova tarefa.
+- Concluir uma tarefa.
+- Editar uma tarefa.
+- Remover uma tarefa.
+- Opções para filtrar a exibição de tarefas.
+- Uma página dinâmica para cada tarefa.
 
 ## 📝 Notas
 
-<!-- Notas sobre o projeto -->
+Tive problemas em configurar e utilizar o **Redux** com o **Local Storage**, então optei pela **Context API**, que cumpre a mesma função.
 
 ## 🔎 Demonstração
 
@@ -59,10 +64,10 @@
       </td>
     </tr>
     <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=markdown" />
+     <td align="center" width="110" height="110">
+        <img src="https://skillicons.dev/icons?i=nodejs" />
         <br>
-        <span>Markdown</span>
+        <span>NodeJS</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=sass" />
@@ -78,28 +83,6 @@
         <img src="https://skillicons.dev/icons?i=next" />
         <br>
         <span>Next</span>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=jest" />
-        <br>
-        <span>Jest</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=mongodb" />
-        <br>
-        <span>MongoDB</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=nodejs" />
-        <br>
-        <span>NodeJS</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=prisma" />
-        <br>
-        <span>Prisma</span>
       </td>
     </tr>
   </tbody>

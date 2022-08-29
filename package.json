@@ -1,7 +1,7 @@
 {
   "name": "todo-list",
-  "description": "<YOUR_PROJECT_DESCRIPTION>",
-  "version": "0.1.0",
+  "description": "Lista de Tarefas básica e funcional, com salvamento de dados no Local Storage do navegador.",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "private": true,
@@ -9,7 +9,7 @@
   "main": "src/pages/_app.tsx",
   "author": {
     "name": "Rian Oliveira",
-    "email": "<YOUR_EMAIL>"
+    "email": "riandiasdeoliveira2001@gmail.com"
   },
   "scripts": {
     "build": "next build",
@@ -30,11 +30,14 @@
   "dependencies": {
     "@prisma/client": "^4.0.0",
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
     "next": "12.2.0",
     "react": "^18.0.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
-    "sharp": "^0.30.7"
+    "sharp": "^0.30.7",
+    "uid": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
@@ -63,9 +66,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/riandeoliveira/<GITHUB_PROJECT_NAME>.git"
+    "url": "https://github.com/riandeoliveira/TodoList.git"
   },
-  "keywords": [],
+  "keywords": [
+    "css",
+    "html",
+    "javascript",
+    "nextjs",
+    "react",
+    "sass",
+    "typescript"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
