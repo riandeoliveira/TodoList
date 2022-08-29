@@ -20,7 +20,7 @@ export const TodoList = (): JSX.Element => {
   return (
     <main className={styles.main}>
       <div className={styles.heading}>
-        <h2>Suas tarefas</h2>
+        <h2 className={styles.title}>Suas tarefas</h2>
         <div className={styles.filters}>
           <button
             type="button"
