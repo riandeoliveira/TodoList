@@ -50,7 +50,6 @@
     "media-feature-range-operator-space-after": "always",
     "media-feature-range-operator-space-before": "always",
     "named-grid-areas-no-invalid": true,
-    "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
     "no-duplicate-selectors": true,
     "no-empty-first-line": true,

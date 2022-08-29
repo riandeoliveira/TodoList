@@ -1,0 +1,12 @@
+@use "../../styles" as *;
+
+.header {
+  @include area-box;
+
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  color: $neutral-000;
+}

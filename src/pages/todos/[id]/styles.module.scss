@@ -1,4 +1,4 @@
-@use "../../styles" as *;
+@use "../../../styles" as *;
 
 .layout {
   display: flex;
@@ -8,4 +8,8 @@
 
 .container {
   @include animated-background;
+}
+
+.section {
+  @include area-box;
 }
