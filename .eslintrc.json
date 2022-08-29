@@ -17,7 +17,6 @@
   "rules": {
     "accessor-pairs": "error",
     "array-bracket-spacing": "error",
-    "array-callback-return": "error",
     "arrow-body-style": "off",
     "arrow-parens": "error",
     "arrow-spacing": "error",
@@ -28,7 +27,6 @@
     "comma-spacing": "error",
     "complexity": "error",
     "computed-property-spacing": "error",
-    "consistent-return": "error",
     "consistent-this": "error",
     "curly": "error",
     "default-case-last": "error",
