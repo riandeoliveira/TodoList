@@ -10,21 +10,29 @@ interface TodoProviderProps {
 export const TodoContext = createContext<ITodoContext | null>(null);
 
 export const TodoProvider = ({ children }: TodoProviderProps) => {
+  // Armazena a lista de tarefas, um vetor de objetos.
   const [todoList, setTodoList] = useState<ITodo[]>([]);
 
+  // Armazena os dados do modal para a edição de uma tarefa.
   const [editTodoName, setEditTodoName] = useState<string>("");
   const [editTodoDescription, setEditTodoDescription] = useState<string>("");
 
+  // Armazena o ID de uma tarefa selecionada.
   const [todoId, setTodoId] = useState<string>("");
 
+  // Armazena os tipos de filtro de tarefas, eles podem ser: todas / concluídas / pendentes.
   const [filterType, setFilterType] = useState<FilterType>("all");
 
+  // Armazena o status do modal, se está aberto ou fechado.
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
+  // Armazena uma referência da entrada de nome da tarefa.
   const todoNameElement: RefObject<HTMLInputElement> =
     useRef<HTMLInputElement>(null);
 
+  // Adiciona uma nova tarefa, recebendo o nome e descrição como argumentos.
   const addTodo = (name: string, description: string): void => {
+    // Objeto contendo uma nova tarefa e um ID único.
     const newTodo: ITodo = {
       id: uid(),
       name,
@@ -37,6 +45,7 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
     localStorage.setItem("todos", JSON.stringify([...todoList, newTodo]));
   };
 
+  // Concluí uma tarefa, recebendo o ID da que foi selecionada.
   const completeTodo = (id: string) => {
     const list: ITodo[] = todoList.map((todo) => {
       if (todo.id === id) {
@@ -56,9 +65,11 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
     localStorage.setItem("todos", JSON.stringify(list));
   };
 
+  // Funções para abrir e fechar o modal.
   const handleOpenModal = (): void => setModalIsOpen(true);
   const handleCloseModal = (): void => setModalIsOpen(false);
 
+  // Renomeia uma tarefa, recebendo o ID da que foi selecionada.
   const renameTodo = (id: string): void => {
     if (todoNameElement.current?.value.trim().length === 0) {
       alert("Insira um nome para sua tarefa!");
@@ -88,6 +99,7 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
     }
   };
 
+  // Remove uma tarefa, recebendo o ID da que foi selecionada.
   const removeTodo = (id: string) => {
     const list: ITodo[] = todoList.filter((todo) => todo.id !== id);
 
@@ -96,8 +108,10 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
     localStorage.setItem("todos", JSON.stringify([...list]));
   };
 
+  // Seta um tipo de filtro no estado que os armazena.
   const filterByType = (type: FilterType) => setFilterType(type);
 
+  // Objeto para ser exportado como contexto global.
   const data: ITodoContext = {
     todoList,
     editTodoName,

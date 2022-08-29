@@ -6,13 +6,16 @@ import styles from "./styles.module.scss";
 export const TodoForm = (): JSX.Element => {
   const { addTodo, todoNameElement } = useContext(TodoContext) as ITodoContext;
 
+  // Estados para armazenar os valores dinâmicos inseridos no input e textarea.
   const [todoName, setTodoName] = useState<string>("");
   const [todoDescription, setTodoDescription] = useState<string>("");
 
+  // Foca no input de texto ao renderizar o componente.
   useEffect(() => {
     todoNameElement.current?.focus();
   }, []);
 
+  // Lida com o envio da nova tarefa. Se a mesma for válida então é adicionada.
   const handleTodoSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

@@ -1,4 +1,3 @@
-import { TodoModal } from "components/TodoModal";
 import { TodoContext } from "contexts/TodoContext";
 import type { ITodo, ITodoContext } from "interfaces";
 import { FiEdit, FiInfo, HiOutlineTrash } from "libs/react-icons";
@@ -13,6 +12,7 @@ export const Todo = ({ id, name, completed }: TodoProps): JSX.Element => {
     TodoContext
   ) as ITodoContext;
 
+  // constante para o roteamento das páginas em: /todos/[id].
   const router: NextRouter = useRouter();
 
   return (
@@ -43,6 +43,8 @@ export const Todo = ({ id, name, completed }: TodoProps): JSX.Element => {
             title="Editar tarefa"
             className={styles.button}
             onClick={() => {
+              // Quando o botão de editar é clicado um modal é aberto e o id da tarefa selecionada é armazenado para ser utilizado dentro do modal.
+
               setTodoId(id);
 
               handleOpenModal();
@@ -60,7 +62,6 @@ export const Todo = ({ id, name, completed }: TodoProps): JSX.Element => {
           </button>
         </div>
       </div>
-      <TodoModal />
     </>
   );
 };

@@ -9,10 +9,15 @@ export const TodoList = (): JSX.Element => {
     TodoContext
   ) as ITodoContext;
 
+  // Quantidade total de tarefas.
   const allTodos: number = todoList.length;
+
+  // Quantidade de tarefas concluídas.
   const completedTodos: number = todoList.filter(
     (todo) => todo.completed === true
   ).length;
+
+  // Quantidade de tarefas pendentes.
   const pendingTodos: number = todoList.filter(
     (todo) => todo.completed === false
   ).length;
@@ -52,16 +57,21 @@ export const TodoList = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.todo_list}>
+        {/* Renderiza todas as tarefas existentes. */}
         {filterType === "all" &&
           todoList.map(({ id, name, completed }, i) => (
             <Todo id={id} name={name} completed={completed} key={i} />
           ))}
+
+        {/* Renderiza todas as tarefas concluídas. */}
         {filterType === "completed" &&
           todoList.map(({ id, name, completed }, i) => {
             if (completed) {
               return <Todo id={id} name={name} completed={completed} key={i} />;
             }
           })}
+
+        {/* Renderiza todas as tarefas pendentes. */}
         {filterType === "pending" &&
           todoList.map(({ id, name, completed }, i) => {
             if (!completed) {

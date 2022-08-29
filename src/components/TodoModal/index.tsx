@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import styles from "./styles.module.scss";
 
+// Modal do React Bootstrap. Responsável pela interface da edição de tarefas.
+
 export const TodoModal = () => {
   const {
     modalIsOpen,
