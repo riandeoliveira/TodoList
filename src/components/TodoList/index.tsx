@@ -69,6 +69,8 @@ export const TodoList = (): JSX.Element => {
             if (completed) {
               return <Todo id={id} name={name} completed={completed} key={i} />;
             }
+
+            return "";
           })}
 
         {/* Renderiza todas as tarefas pendentes. */}
@@ -77,6 +79,8 @@ export const TodoList = (): JSX.Element => {
             if (!completed) {
               return <Todo id={id} name={name} completed={completed} key={i} />;
             }
+
+            return "";
           })}
       </div>
     </main>
