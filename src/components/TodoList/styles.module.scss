@@ -56,3 +56,22 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+@include media-query($tablet-s) {
+  .heading {
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+}
+
+@include media-query($mobile-l) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}

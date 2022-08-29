@@ -50,3 +50,18 @@
     stroke: $primary-390;
   }
 }
+
+@include media-query($mobile-l) {
+  .todo {
+    font-size: 1.4rem;
+  }
+
+  .option_container {
+    gap: 1rem;
+  }
+
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+}

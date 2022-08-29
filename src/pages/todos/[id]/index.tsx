@@ -37,8 +37,8 @@ const Todos: NextPage = (): JSX.Element => {
       <div className={styles.container}>
         <Header />
         <section className={styles.section}>
-          <h2>{currentTodo.name}</h2>
-          <div>{currentTodo.description}</div>
+          <h2 className={styles.title}>{currentTodo.name}</h2>
+          <p className={styles.description}>{currentTodo.description}</p>
         </section>
       </div>
     </div>
