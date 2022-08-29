@@ -18,6 +18,7 @@ const Todos: NextPage = (): JSX.Element => {
     completed: false,
   };
 
+  // Ao montar o componente, busca todas as tarefas no Local Storage e armazena no estado 'TodoList'.
   useEffect(() => {
     const storageTodos: ITodo[] = JSON.parse(
       localStorage.getItem("todos") || "[]"
@@ -26,6 +27,7 @@ const Todos: NextPage = (): JSX.Element => {
     setTodoList(storageTodos);
   }, []);
 
+  // Faz uma busca nas tarefas para encontrar aquela que possui o ID passado na URL.
   todoList.find((todo) => {
     if (todo.id === query.id) {
       currentTodo = todo;
@@ -37,7 +39,11 @@ const Todos: NextPage = (): JSX.Element => {
       <div className={styles.container}>
         <Header />
         <section className={styles.section}>
-          <h2 className={styles.title}>{currentTodo.name}</h2>
+          <h2 className={styles.title}>
+            {currentTodo.name === ""
+              ? "Nenhuma tarefa encontrada"
+              : currentTodo.name}
+          </h2>
           <p className={styles.description}>{currentTodo.description}</p>
         </section>
       </div>
